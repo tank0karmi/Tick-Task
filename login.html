@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <img src="C:\Users\Admin\OneDrive\Pictures\popimgs\hyoukabanner-3035652650.jpg" height="175" width="450">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Enter your name">
+    <button onclick="login()">Login</button>
+</div>
+
+<script>
+function login() {
+    let name = document.getElementById("username").value;
+
+    if (name === "") {
+        alert("Please enter your name");
+        return;
+    }
+
+    // save username
+    localStorage.setItem("username", name);
+
+    // open dashboard
+    window.location.href = "dashboard.html";
+}
+</script>
+
+</body>
+</html>

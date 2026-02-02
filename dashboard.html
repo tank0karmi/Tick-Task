@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2 id="welcome"></h2>
+
+    <button onclick="goToTasks()">Go to Task Manager</button>
+    <button onclick="logout()" style="background:red; color:white;">Logout</button>
+</div>
+
+<script>
+let user = localStorage.getItem("username");
+document.getElementById("welcome").innerText = "Welcome, " + user + "!";
+
+function goToTasks() {
+    window.location.href = "tasks.html";
+}
+
+function logout() {
+    localStorage.removeItem("username");
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

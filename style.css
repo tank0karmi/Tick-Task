@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background: pink;
+}
+
+.container {
+    width: 90%;
+    max-width: 450px;
+    background: darkblue;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+h2 {
+    text-align: center;
+    color:white;
+    border:dotted;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+
+button {
+    background: cyan;
+    color: red;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #357ABD;
+}
+
+.task {
+    background: #eee;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete {
+    background: red;
+    color: white;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Task Manager</h2>
+
+    <input type="text" id="taskInput" placeholder="Enter a task...">
+    <button onclick="addTask()">Add Task</button>
+
+    <div id="taskList"></div>
+
+    <br>
+    <button onclick="goBack()">Back to Dashboard</button>
+</div>
+
+<script>
+function addTask() {
+    let text = document.getElementById("taskInput").value;
+
+    if (text === "") {
+        alert("Enter a task");
+        return;
+    }
+
+    let taskBox = document.getElementById("taskList");
+
+    let task = document.createElement("div");
+    task.className = "task";
+
+    let name = document.createElement("span");
+    name.innerText = text;
+
+    let del = document.createElement("button");
+    del.innerText = "X";
+    del.className = "delete";
+    del.onclick = () => task.remove();
+
+    task.appendChild(name);
+    task.appendChild(del);
+
+    taskBox.appendChild(task);
+
+    document.getElementById("taskInput").value = "";
+}
+
+function goBack() {
+    window.location.href = "dashboard.html";
+}
+</script>
+
+</body>
+</html>
